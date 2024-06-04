@@ -1,0 +1,67 @@
+{
+    "seafood":[
+        {
+            "productName": "Tôm hùm Alaska",
+            "price": "200000",
+            "imgUrl": "https://product.hstatic.net/1000166699/product/ala_hap_db799f116ecd4fa3a7fce67351b17a3c_master.jpg",
+            "description": "Tôm Hùm Alaska Hấp Tự Nhiên: Giữ trọn hương vị tự nhiên của thịt Tôm Hùm Alaska: thơm tự nhiên và ngọt đậm đà, từng thớ thịt dai, săn chắc từng khối,..",
+            "id":1
+        },
+        {
+            "productName": "Cua Hoàng Đế",
+            "price": "1500000",
+            "imgUrl": "https://haisanhuubo.com/wp-content/uploads/2020/03/cua-hoang-de-lam-gi-ngon-nhat.jpg",
+            "description": "Cua Hoàng Đế được nhập khẩu sống từ Nguy/Canada nguyên con, có giá trị dinh dưỡng cao. Size cua từ 2k6 Ake con (Bán chạy nhất từ 2k8 3kg/con)",
+            "id": 2
+        },
+        {  
+            "productName": "Cua Cà Mau",
+            "price": "3210000",
+            "imgUrl": "https://haisantrungnam.vn/wp-content/uploads/2020/03/cua-gach-ca-mau-600x600.jpg",
+            "description": "Cua Cà Mau hay Cua xanh (danh pháp hai phần: Scylla paramamosain) là một loài cua biển, nói chung được sử dụng phố biến làm thực phẩm tại Đài Loan và Việt Nam",
+            "id": 3
+        },
+        {
+            "productName": "Mực Một Nắng",
+            "price":"10000",
+            "imgUrl": "https://haisandaiduongxanh.com/wp-content/uploads/2023/03/248.jpg",
+            "description": "Mực một năng là loại mực khô đặc biệt, được rửa bằng nước biển và phơi chỉ đủ “một nắng”, bên ngoài ráo nước nhưng bên trong vẫn tươi ngon.",
+            "id": 4
+        },
+        {
+            "productName": "Tôm sú",
+            "price": "1200000",
+            "imgUrl": "https://www.nhahangquangon.com/wp-content/uploads/2021/10/tom-su-nuong-moi2.jpg",
+            "description": " Tôm sú có kích thước lớn, trung bình dài khoảng 36cm mỗi con và đồng thời khối lượng cũng lớn hơn so với các loại tôm khác, lên đến 650gr/con.",
+            "id": 5
+        },
+        {
+            "productName": "Cá Song nướng",
+            "price":"650000",
+            "imgUrl": "https://haisanxanh.com/uploads/images/ca-song-nuong.jpg",
+            "description": "Cá song là món ăn bổ và ngon, cung cấp nhiều vi chất rất tốt cho sức khoẻ, thuộc bộ siluriformes - cá da trơn.",
+            "id": 6
+        },
+        {
+            "productName": "Bào Ngư hấp sả",
+            "price": "850000",
+            "imgUrl": "https://culaochamtour.com/wp-content/uploads/2020/11/baonguculaocham1-1.jpg",
+            "description": "Bào ngư là món ăn cực phẩm, với rất nhiều chất bổ dưỡng, hỗ trợ bổ thận tráng dương",
+            "id": 7
+        },
+        {
+            "productName": "Cua bé sốt me",
+            "price": "750000",
+            "imgUrl": "https://haisanxanh.com/uploads/images/be-be-sot-me.jpg",
+            "description": "Cua bé sốt mè với hương vị tuyệt vời thụ cực cuốn" ,
+            "id": 8
+        },
+        {
+            "productName": "Lẩu cá chình hải sâm tu hài ngao hoa",
+            "price": "2000000",
+            "imgUrl": "https://haisan.online/wp-content/uploads/2022/01/lau-ca-chinh-13.jpg",
+            "description": "Lẩu hải sản thượng hạng gồm các sản vật hàng đầu của biển",
+            "id": 9
+        }
+    ]
+}
