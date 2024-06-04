@@ -26,6 +26,7 @@ jobs:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
 workflows:
+  version: 2.1
   my-pipeline:
     jobs:
       - node-test
