@@ -1,39 +1,52 @@
-#M config
 version: 2.1
 orbs:
   node: circleci/node@5
-
 jobs:
-  build-and-push:
-    environment:
-      DOCKER_IMAGE: pvha663/react-docker2
-      DOCKER_TAG: latest
-    executor: docker/docker
+  test-node:
+    # Install node dependencies and run tests
+    executor: node/default
     steps:
-      - setup_remote_docker
       - checkout
-      - docker/check:
-          docker-username: DOCKER_USER
-          docker-password: DOCKER_PASSWORD
-      - docker/build:
-          image: $DOCKER_IMAGE
-          tag: $DOCKER_TAG
-      - docker/push:
-          digest-path: /tmp/digest.txt
-          image: $DOCKER_IMAGE
-          tag: $DOCKER_TAG
+      - node/install-packages:
+          pkg-manager: npm
       - run:
-          command: |
-            echo "Digest is: $(</tmp/digest.txt)"
+          name: Run tests
+          command: npm test --passWithNoTests
+  build-node:
+    # Build node project
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: npm run build
+      - run:
+          name: Create the ~/artifacts directory if it doesn't exist
+          command: mkdir -p ~/artifacts
+      # Copy output to artifacts dir
+      - run:
+          name: Copy artifacts
+          command: cp -R build dist public .output .next .docusaurus ~/artifacts 2>/dev/null || true
+      - store_artifacts:
+          path: ~/artifacts
+          destination: node-build
+  deploy:
+    # This is an example deploy job, not actually used by the workflow
+    docker:
+      - image: cimg/base:stable
+    steps:
+      # Replace this with steps to deploy to users
+      - run:
+          name: deploy
+          command: '#e.g. ./deploy.sh'
 workflows:
-  version: 2.1
-  my-pipeline:
+  build-and-test:
     jobs:
-      - node-test
-      - build-and-push:
+      - test-node
+      - build-node:
           requires:
-          - node-test
-          filters:
-            branches:
-              only:
-                -main
+            - test-node
+    # - deploy:
+    #     requires:
+    #       - build-node
